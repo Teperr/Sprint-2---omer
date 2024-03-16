@@ -13,6 +13,8 @@ function onInitMeme() {
 
     renderMeme()
 
+    document.querySelector('.editor-section').classList.remove('hide')
+
 }
 
 function renderMeme() {

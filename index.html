@@ -7,6 +7,8 @@
     <title>Ultimate Meme Generator</title>
 
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/gallery-image.css">
+    <link rel="stylesheet" href="style/helpers.css">
 </head>
 
 <body onload="onInit()">
@@ -15,7 +17,7 @@
         <div class="logo">Master Meme</div>
         <nav class="main-nav">
             <ul class="main-nav-list">
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#" onclick="onInitGallery()">Gallery</a></li>
                 <li><a href="#">Memes</a></li>
                 <li><a href="#">About</a></li>
             </ul>
@@ -23,21 +25,25 @@
     </header>
 
     <main>
-        <section class="gallery-section" onclick="onInitGallery()"></section>
-
         <section class="editor-section">
-            <canvas width="600" height="600"></canvas>
+            <div class="main-canvas">
+                <canvas width="600" height="600"></canvas>
 
+            </div>
+
+            <div class="buttons">
+                <table>
+                    <td><label for="text"></label></td>
+                    <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
+                </table>
+            </div>
         </section>
 
-        <section class="buttons">
-            <table>
-                <td><label for="text"></label></td>
-                <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
-            </table>
-        </section>
-        
+        <section class="gallery-section">
+            <div class="flex-container">
 
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
