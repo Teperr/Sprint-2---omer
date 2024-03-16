@@ -3,7 +3,7 @@
 var gElCanvas
 var gCtx
 
-function initMeme() {
+function onInitMeme() {
     gElCanvas = document.querySelector('canvas')
     gCtx = gElCanvas.getContext('2d')
 
@@ -35,5 +35,17 @@ function renderMeme() {
     
         gCtx.fillText(text, 50, 50)
     }
+
+}
+
+
+function onSetLineTxt(el){
+    // console.log('el:', el)
+    // console.log('el.value:', el.value)
+
+    setLineTxt(el.value)
+    renderMeme() 
+
+
 
 }

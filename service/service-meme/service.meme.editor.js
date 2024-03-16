@@ -24,6 +24,16 @@ function getMeme() {
 }
 
 
+function setLineTxt(text, lineIdx){
+    var {lines} = gMeme
+    console.log('lines[0].txt:', lines[0].txt)
+
+    lines[0].txt = text
+
+
+}
+
+
 // function _createMeme() {
 //     return {
 //         selectedImgId: 5,

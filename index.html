@@ -23,11 +23,18 @@
     </header>
 
     <main>
-        <section class="gallery-section"></section>
+        <section class="gallery-section" onclick="onInitGallery()"></section>
 
         <section class="editor-section">
             <canvas width="600" height="600"></canvas>
 
+        </section>
+
+        <section class="buttons">
+            <table>
+                <td><label for="text"></label></td>
+                <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
+            </table>
         </section>
         
 
