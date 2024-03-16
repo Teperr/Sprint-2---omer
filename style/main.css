@@ -1,0 +1,8 @@
+* {
+	box-sizing: border-box;
+}
+
+canvas {
+	background-color: white;
+	border: 1px solid lightgray;
+}
