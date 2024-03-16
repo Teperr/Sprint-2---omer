@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Meme Generator</title>
-
     
+    <!-- Style -->
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
 
+    <!-- Util & Storage -->
+    <script src="service/service-util/service.util.js"></script>
+    <script src="service/service-local-storage/service.local.storage.js"></script>
+
+    <!-- Service -->
+    <script src="service/main.js"></script>
+    <script src="service/service-gallery/service.image.gallery.js"></script>
+    <script src="service/service-meme/service.meme.editor.js"></script>
+
+    <!-- Controller -->
+    <script src="controller/controller.image.gallery.js"></script>
+    <script src="controller/controller.meme.editor.js"></script>
 </body>
 
 </html>
