@@ -16,20 +16,24 @@ function initMeme() {
 }
 
 function renderMeme() {
-    const img = new Image()
-    img.src = 'img/meme-imgs (square)/1.jpg'
+    var meme = getMeme()
+    console.log('meme:', meme)
 
+    var {selectedImgId, selectedLineIdx, lines} = meme
+    // console.log('selectedImgId:', selectedImgId)
+
+    const img = new Image()
+    img.src = `img/meme-imgs (square)/${selectedImgId}.jpg`
 
     img.onload = () =>{
         gCtx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight)
         
-        const text = 'shira'
+        const text = lines[selectedLineIdx].txt
 
-        gCtx.fillStyle = 'orange'
-        gCtx.font = '50px Ariel'
+        gCtx.fillStyle = lines[selectedLineIdx].color
+        gCtx.font = `${lines[selectedLineIdx].size}px Ariel`
     
         gCtx.fillText(text, 50, 50)
-        gCtx.storkeText(text, 50, 50)
     }
 
 }
