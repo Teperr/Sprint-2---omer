@@ -2,8 +2,8 @@
 
 function onInit() {
 
-    onInitMeme()
-    // onInitGallery()
+    // onInitMeme()
+    onInitGallery()
 
     
 

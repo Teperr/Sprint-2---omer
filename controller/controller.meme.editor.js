@@ -14,12 +14,13 @@ function onInitMeme() {
     renderMeme()
 
     document.querySelector('.editor-section').classList.remove('hide')
+    document.querySelector('.gallery-section').classList.add('hide')
 
 }
 
 function renderMeme() {
     if (!gMeme) return
-    var meme = getMeme()
+    var meme = gMeme
     console.log('meme:', meme)
 
     var {selectedImgId, selectedLineIdx, lines} = meme

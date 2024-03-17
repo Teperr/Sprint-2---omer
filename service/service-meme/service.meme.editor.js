@@ -3,7 +3,7 @@
 // var imgCount = 18
 var gImgs = _createImgs()
 
-var gMeme 
+var gMeme
 var gMemes = []
 _createMemes()
 
@@ -13,14 +13,14 @@ console.log('gMeme:', gMeme)
 
 
 
-function getMeme(imgId) {
-    // gMeme = createMeme(imgId)
+function getMemes() {
 
-
-    return gMeme
-
+    return gMemes
 }
 
+function getMemeById(memeId) {
+    return gMemes.find(meme => memeId === meme.selectedImgId)
+}
 
 
 

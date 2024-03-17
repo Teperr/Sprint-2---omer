@@ -1,9 +1,12 @@
 'use strict'
-onInitGallery()
+
+// onInitGallery()
 function onInitGallery() {
     renderGallery()
 
-    // document.querySelector('.editor-section').classList.add('hide')
+    
+    document.querySelector('.editor-section').classList.add('hide')
+    document.querySelector('.gallery-section').classList.remove('hide')
 }
 
 
@@ -14,7 +17,6 @@ function renderGallery() {
     
     <article class="">
         <img class="grid-item item${img.id}" 
-        data-id="${img.id}" 
         src="img/meme-imgs (square)/${img.id}.jpg" 
         onclick="onImageClicked(this,${img.id})">
     </article>
@@ -33,22 +35,20 @@ function handleFileUpload(event) {
 
 
 function onImageClicked(el, imgId) {
-    // console.log('data-id:', data-id)
-    console.log('imgId', imgId)
+    gMeme = getMemeById(imgId)
 
-    gMeme = _createMeme(imgId)
-    console.log('gMeme:', gMeme)
-
+    
     renderMeme()
-
-
-
-
+    onInitMeme()
 }
 
 
 function onSaveImg(ev) {
     saveImg(ev)
+}
 
 
+
+function _hideGallery(){
+    
 }
