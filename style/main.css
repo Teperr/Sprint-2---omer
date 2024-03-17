@@ -43,7 +43,7 @@ canvas {
 } */
 
 img {
-    
+    cursor: pointer;
     /* overflow-clip-margin: content-box; */
     overflow: clip;
 }

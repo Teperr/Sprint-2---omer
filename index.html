@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ultimate Meme Generator</title>
 
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/gallery-image.css">
     <link rel="stylesheet" href="style/helpers.css">
+    <script src="https://kit.fontawesome.com/a190ef2d05.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="onInit()">
@@ -32,14 +34,48 @@
             <canvas width="600" height="600"></canvas>
 
         </div>
-        
 
-        <div class="buttons">
-            <table>
-                <td><label for="text"></label></td>
-                <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
-            </table>
-        </div>
+
+        <section class="editor-tools">
+
+            <label for="text"></label>
+            <input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)">
+
+            <div class="">
+                <button class="switch-text"><i class="fa-solid fa-arrow-up"> <i
+                            class="fa-solid fa-arrow-down"></i></i></button>
+                <button class="add-text"><i class="fa-solid fa-plus"></i></button>
+                <button class="remove-text"><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <div class="">
+                <button class="text-growth"><i class="fa-solid fa-font"></i><i
+                        class="fa-solid fa-plus"></i></i></button>
+                <button class="reduce-text"><i class="fa-solid fa-font"></i><i class="fa-solid fa-minus"></i></button>
+                <button class="ltr-text"><i class="fa-solid fa-align-left"></i></i></button>
+                <button class="center-text"><i class="fa-solid fa-align-center"></i></button>
+                <button class="rtl-text"><i class="fa-solid fa-align-right"></i></button>
+                <select name="font" id="">font</select>
+
+                <label for="text-color-border">
+                    <input type="color" id="text-color-border" name="text-color-border">
+                    <!-- <i class="fa-solid fa-brush"></i> -->
+                </label>
+
+                <label for="text-color">
+                    <input type="color" id="text-color" name="text-color">
+                    <!-- <i class="fa-solid fa-brush"></i> -->
+                </label>
+
+            </div>
+
+            <div class="">
+                <button class="save-meme-button"><i class="fa-solid fa-download"></i>Save</button>
+                <button class="share-meme-button"><i class="fa-solid fa-share"></i>Share</button>
+                <button class="download-meme-button"></i><i class="fa-solid fa-floppy-disk"></i>Download</button>
+            </div>
+
+        </section>
     </section>
 
 
@@ -59,7 +95,7 @@
 
                         <button>Save</button>
                     </form> -->
-                    
+
 
                 </div>
             </section>
