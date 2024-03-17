@@ -7,9 +7,9 @@ function onInitMeme() {
     gElCanvas = document.querySelector('canvas')
     gCtx = gElCanvas.getContext('2d')
 
-    console.log('SSDD:')
-    console.log('gElCanvas:', gElCanvas)
-    console.log('gCtx:', gCtx)
+  
+    // console.log('gElCanvas:', gElCanvas)
+    // console.log('gCtx:', gCtx)
 
     renderMeme()
 
@@ -18,6 +18,7 @@ function onInitMeme() {
 }
 
 function renderMeme() {
+    if (!gMeme) return
     var meme = getMeme()
     console.log('meme:', meme)
 
@@ -30,6 +31,8 @@ function renderMeme() {
     img.onload = () =>{
         gCtx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight)
         
+        // console.log('lines:', lines)
+        // console.log('lines[selectedLineIdx]:', lines[selectedLineIdx])
         const text = lines[selectedLineIdx].txt
 
         gCtx.fillStyle = lines[selectedLineIdx].color

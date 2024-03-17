@@ -1,20 +1,77 @@
+/* .gallery-section main {
+    background-color: gray;
+} */
 
-
-.flex-container {
+.gallery-grid-container {
     /* height: 100%; */
-    display: flex;
+    /* max-width: 1250px; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
-    flex-wrap: wrap;
+    align-items: center;
+
+    border-radius: 1.5em;
     width: 80vw;
+    padding: 2em;
+    margin: 20px auto;
+
+    background-color: gray;
+
 }
 
-.flex-item{
-    width: 100px;
+.grid-item {
+    /* width: 6.25em; */
     /* height: 100px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     border-radius: 20%;
 
+    box-shadow: 10px 10px 92px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 92px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 92px 0px rgba(0, 0, 0, 0.75);
 
+
+
+}
+
+/* .item{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.upload-image {
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid lightgray;
+    border-radius: 20%;
+
+    /* width: 100%; */
+    position: relative;
+
+    input[type=file] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+}
+
+
+.save-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10;
 }
 
 /* .item1{
@@ -40,3 +97,55 @@
 .item6{
     background-color: orange;
 } */
+
+.file-area {
+    width: 100%;
+    position: relative;
+
+    input[type=file] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .file-dummy {
+        width: 100%;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px dashed rgba(255, 255, 255, 0.2);
+        text-align: center;
+        transition: background 0.3s ease-in-out;
+
+        .success {
+            display: none;
+        }
+    }
+
+    &:hover .file-dummy {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    input[type=file]:focus+.file-dummy {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    input[type=file]:valid+.file-dummy {
+        border-color: rgba(0, 255, 0, 0.4);
+        background-color: rgba(0, 255, 0, 0.3);
+
+        .success {
+            display: inline-block;
+        }
+
+        .default {
+            display: none;
+        }
+    }
+}

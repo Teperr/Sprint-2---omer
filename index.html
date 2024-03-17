@@ -14,9 +14,11 @@
 <body onload="onInit()">
 
     <header class="main-header">
+        <!-- Master Meme -->
+        <!-- <div class="logo"><img src="img/logo/logo meme.png" alt=""></div> -->
         <div class="logo">Master Meme</div>
         <nav class="main-nav">
-            <ul class="main-nav-list">
+            <ul class="main-nav-list clean-list flex">
                 <li><a href="#" onclick="onInitGallery()">Gallery</a></li>
                 <li><a href="#">Memes</a></li>
                 <li><a href="#">About</a></li>
@@ -24,27 +26,46 @@
         </nav>
     </header>
 
-    <main>
-        <section class="editor-section">
-            <div class="main-canvas">
-                <canvas width="600" height="600"></canvas>
 
-            </div>
+    <section class="editor-section">
+        <div class="main-canvas">
+            <canvas width="600" height="600"></canvas>
 
-            <div class="buttons">
-                <table>
-                    <td><label for="text"></label></td>
-                    <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
-                </table>
-            </div>
-        </section>
+        </div>
+        
 
-        <section class="gallery-section">
-            <div class="flex-container">
+        <div class="buttons">
+            <table>
+                <td><label for="text"></label></td>
+                <td><input type="text" id="name" placeholder="Text Here" oninput="onSetLineTxt(this)"></td>
+            </table>
+        </div>
+    </section>
 
-            </div>
-        </section>
-    </main>
+
+
+    <section class="gallery-section">
+        <main>
+            <section class="search-filter">
+                <div class="input-search"></div>
+                <div class="filter-by-word"></div>
+            </section>
+            <section>
+
+                <div class="gallery-grid-container">
+                    <!-- <label for="upload">Upload</label>
+                    <input type="file" name="upload" id="upload"> -->
+                    <!-- <form onsubmit="saveImg(event)">
+
+                        <button>Save</button>
+                    </form> -->
+                    
+
+                </div>
+            </section>
+        </main>
+    </section>
+
 
     <footer class="main-footer">
         <small class="footer-rights">

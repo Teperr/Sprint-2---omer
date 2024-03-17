@@ -1,29 +1,53 @@
 'use strict'
 
-var imgCount = 18
-var gImgs = createImgsDemoData()
+// var imgCount = 18
+var gImgs = _createImgs()
+
+var gMeme 
+var gMemes = []
+_createMemes()
+
 console.log('gImgs:', gImgs)
+console.log('gMemes:', gMemes)
+console.log('gMeme:', gMeme)
 
-var gMeme = createMeme(5)
 
-function createMeme(imgId) {
-    return gMeme = {
-        selectedImgId: imgId,
-        selectedLineIdx: 0,
-        lines: [
-            {
-                txt: 'I sometimes eat Falafel',
-                size: 20,
-                color: 'red'
-            }
-        ]
-    }
+
+function getMeme(imgId) {
+    // gMeme = createMeme(imgId)
+
+
+    return gMeme
 
 }
 
-console.log('gMeme:', gMeme)
 
-function createImgsDemoData() {
+
+
+function setLineTxt(text, lineIdx) {
+    var { lines } = gMeme
+    console.log('lines[0].txt:', lines[0].txt)
+
+    lines[0].txt = text
+}
+
+
+function saveImg(ev) {
+    console.log('ev:', ev)
+    // saveToStorage(key, val)
+
+}
+
+
+
+
+
+
+
+
+// Privet Function
+
+function _createImgs() {
     return [
         { id: 1, url: 'img/meme-imgs (square)/1.jpg', keywords: ['funny', 'cat'] },
         { id: 2, url: 'img/meme-imgs (square)/2.jpg', keywords: ['happy', 'dog'] },
@@ -46,21 +70,33 @@ function createImgsDemoData() {
     ]
 }
 
+function _createMemes() {
+    gImgs.forEach(img => gMemes.push(_createMeme(img.id)))
+}
 
-function getMeme() {
-    // gMeme = createMeme(imgId)
-    return gMeme
+function _createMeme(imgId, lineIdx = 0) {
+    return {
+        selectedImgId: imgId,
+        selectedLineIdx: lineIdx,
+        lines: [
+            {
+                txt: 'I sometimes eat Falafel',
+                size: 20,
+                color: 'red'
+            }
+        ]
+    }
 
 }
 
-
-function setLineTxt(text, lineIdx) {
-    var { lines } = gMeme
-    console.log('lines[0].txt:', lines[0].txt)
-
-    lines[0].txt = text
-
-
+function _saveImgs() {
+    saveToStorage('gImgsDB', gImgs)
 }
 
+function _saveMemes() {
+    saveToStorage('gMemesDB', gMemes)
+}
 
+function _saveMeme() {
+    saveToStorage('gMemeDB', gMeme)
+}
